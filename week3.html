@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            /* height: 100vh;
+            width: 100vh; */
+            margin: 0;
+            background-color: beige;
+
+
+        }
+
+        header {
+            align-content: center;
+            background-color: green;
+            padding: 0;
+        }
+
+        .navlinks {
+            list-style-type: none;
+            background-color: gray;
+            display: inline-block;
+            margin: 0px;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+        }
+
+        .home {
+            font-size: 4em;
+            margin: 10px;
+
+        }
+
+        .navlink {
+            font-size: 2em;
+            margin: 5px;
+
+        }
+
+        .title {
+            text-decoration: underline;
+            text-align: center;
+            margin: 0;
+            padding: 1em;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            width: 100vw;
+            overflow: scroll;
+        }
+
+        .middler {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+            background-color: beige;
+            height: auto;
+            width: 100vw;
+            /* height: 100vh; */
+
+        }
+
+        .lefter {
+            flex-basis: 1;
+            background-color: red;
+            padding: 1em;
+            border: solid;
+            height: auto;
+        }
+
+        .righter {
+            background-color: royalblue;
+            padding: 1em;
+            border: solid;
+            height: auto;
+            flex-grow: 1;
+
+        }
+
+        footer {
+            padding: 1em;
+            border: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navlinks">
+                <li class="home"> <a href=index.html>🏠</a></li>
+                <li class="navlink"> <a href=week1.html>Week 1</a></li>
+                <li class="navlink"> <a href=week2.html>Week 2</a></li>
+
+            </ul>
+        </nav>
+        <h1 class="title" style="color:beige;">Week 3</h1>
+    </header>
+    <div class="middler">
+        <aside class="lefter">
+            <p>LEFT SIDEBAR
+            </p>
+        </aside>
+        <main>
+            <p>Spent this week trying to get the hang of flexbox a bit more. Seems like it might be simple when going
+                over the reading, but it doesn't ever seem to come out how you expect on the first try. Seems like
+                there's always some small detail that causes something inexplicable.
+            </p>
+            <p>
+                Suppose like everything it's something that will only start to click once you try it.
+            </p>
+            <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Thomas_Cole_-_Architect%E2%80%99s_Dream_-_Google_Art_Project.jpg/977px-Thomas_Cole_-_Architect%E2%80%99s_Dream_-_Google_Art_Project.jpg
+                alt="Architect's dream - Thomas Cole">Architect's Dream - Thomas Cole</img>
+            <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Kano_Eitoku_-_Cypress_Trees.jpg/1602px-Kano_Eitoku_-_Cypress_Trees.jpg
+                alt="Cypress Trees - Kano Eitoku">Cypress Tree - Kano Eitoku<img>
+            <pre>BufferedWriter out = null;
+try {
+	out = new BufferedWriter(new FileWriter(”filename”, true));
+	out.write(”aString”);
+} catch (IOException e) {
+	// error processing code
+} finally {
+	if (out != null) {
+		out.close();
+	}
+    (sample java code!)
+}
+            </pre>
+            <ul>
+                <h3 class="title">Sources</h3>
+                <li><a href=https://allover.twodee.org>Class textbook</a>
+                </li>
+                <li><a href=https://twodee.org/blog/18142>Blog setup instructions</a>
+                </li>
+                <li><a href="https://www.w3schools.com/tags/tag_iframe.ASP">Video Embed</a>
+                </li>
+                <li><a href=https://en.wikipedia.org/wiki/Wikipedia:Featured_pictures/Artwork/Paintings>Wikipedia Art Images</a>
+                </li>
+            </ul>
+        </main>
+
+        <aside class="righter">
+            <p>RIGHT SIDEBAR
+            </p>
+        </aside>
+    </div>
+    <footer>
+        <p>Copyright Ryan Linsley &copy;</p>
+    </footer>
+</body>
+
+</html>
