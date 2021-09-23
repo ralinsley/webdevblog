@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            /* height: 100vh;
+            width: 100vh; */
+            margin: 0;
+            background-color: beige;
+
+
+        }
+
+        header {
+            align-content: center;
+            background-color: green;
+            padding: 0;
+        }
+
+        .navlinks {
+            list-style-type: none;
+            background-color: gray;
+            display: inline-block;
+            margin: 0px;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+        }
+
+        .navlinks:hover {
+            background-color: gray;
+        }
+
+        .navlink:hover {
+            background-color: white;
+        }
+
+        .home {
+            font-size: 2em;
+            margin: 5px;
+
+        }
+
+        .navlink {
+            font-size: 2em;
+            margin: 5px;
+        }
+
+        .title {
+            text-decoration: underline;
+            text-align: center;
+            margin: 0;
+            padding: 1em;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            width: 100vw;
+            margin: 10vw;
+            margin-top: 10px;
+            overflow: scroll;
+        }
+
+        .middler {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+            background-color: beige;
+            height: auto;
+            width: 100vw;
+            /* height: 100vh; */
+
+        }
+
+        pre {
+            background-color: black;
+            color: white;
+            width: fit-content;
+            padding: 5px;
+        }
+
+        .lefter {
+            flex-basis: 1;
+            background-color: red;
+            padding: 1em;
+            border: solid;
+            height: auto;
+        }
+
+        .righter {
+            background-color: royalblue;
+            padding: 1em;
+            border: solid;
+            height: auto;
+            flex-grow: 1;
+
+        }
+
+        footer {
+            padding: 1em;
+            border: solid;
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                background-color: lightgreen;
+            }
+
+            main {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body onload="alert(&quot; Page is loaded. Sorry for the annoying prompt!&quot;)">
+    <header>
+        <nav>
+            <ul class="navlinks">
+                <li class="home"> <a href=index.html>home</a></li>
+                <li class="navlink"> <a href=week1.html>Week 1</a></li>
+                <li class="navlink"> <a href=week2.html>Week 2</a></li>
+                <li class="navlink"> <a href=week3.html>Week 3</a></li>
+            </ul>
+        </nav>
+        <h1 class="title" style="color:beige;">Week 4</h1>
+    </header>
+    <div class="middler">
+        </aside>
+        <main>
+            <p>This week I've tried to learn how to have certain code to run based on events. My very first bit of
+                JavaScript code. Simply calling an in-built function!
+            <pre> alert(&quot; Page is loaded. &quot;)</pre>
+            VS Code doesn't seem to agree with my way of escaping out the double-quotes, but it seems to be working as
+            intended.
+            </p>
+            <p>
+                Seems like there are tons of different types of events that can fire off scripts written in JS. Looking
+                forward to learning JavaScript so I can take advantage of all these events. Have also tried to make the
+                margins on the page to go away once the window is small enough so that it works better on mobile phones.
+                This new knowledge of media-queries will come in handy for my static website.
+            </p>
+            <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Thomas_Cole_-_Architect%E2%80%99s_Dream_-_Google_Art_Project.jpg/977px-Thomas_Cole_-_Architect%E2%80%99s_Dream_-_Google_Art_Project.jpg
+                alt="Architect's dream - Thomas Cole">Architect's Dream - Thomas Cole</img>
+            <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Kano_Eitoku_-_Cypress_Trees.jpg/1602px-Kano_Eitoku_-_Cypress_Trees.jpg
+                alt="Cypress Trees - Kano Eitoku">Cypress Tree - Kano Eitoku<img>
+            <ul>
+                <h3 class="title">Sources</h3>
+                <li><a href=https://allover.twodee.org>Class textbook</a>
+                </li>
+                <li><a href=https://twodee.org/blog/18142>Blog setup instructions</a>
+                </li>
+                <li><a href="https://www.w3schools.com/tags/tag_iframe.ASP">Video Embed</a>
+                </li>
+                <li><a href=https://en.wikipedia.org/wiki/Wikipedia:Featured_pictures/Artwork/Paintings>Wikipedia Art
+                        Images</a>
+                </li>
+                <li><a href=https://www.w3schools.com/Css/css3_mediaqueries_ex.asp>Media Queries</a></li>
+                <li><a href=https://www.w3schools.com/tags/ref_eventattributes.asp>Events</a></li>
+            </ul>
+        </main>
+
+    </div>
+    <footer>
+        <p>Copyright Ryan Linsley &copy;</p>
+    </footer>
+</body>
+
+</html>
