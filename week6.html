@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            /* height: 100vh;
+            width: 100vh; */
+            margin: 0;
+            background-color: beige;
+
+
+        }
+
+        header {
+            align-content: center;
+            background-color: green;
+            padding: 0;
+        }
+
+        .navlinks {
+            list-style-type: none;
+            background-color: gray;
+            display: inline-block;
+            margin: 0px;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+        }
+
+        .navlinks:hover {
+            background-color: gray;
+        }
+
+        .navlink:hover {
+            background-color: white;
+        }
+
+        .home {
+            font-size: 2em;
+            margin: 5px;
+
+        }
+
+        .navlink {
+            font-size: 2em;
+            margin: 5px;
+        }
+
+        .title {
+            text-decoration: underline;
+            text-align: center;
+            margin: 0;
+            padding: 1em;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            width: 100vw;
+            margin: 10vw;
+            margin-top: 10px;
+            overflow: scroll;
+        }
+
+        .middler {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+            background-color: beige;
+            height: auto;
+            width: 100vw;
+            /* height: 100vh; */
+
+        }
+
+        pre {
+            background-color: black;
+            color: white;
+            width: fit-content;
+            padding: 5px;
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                background-color: lightgreen;
+            }
+
+            main {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navlinks">
+                <li class="home"> <a href=index.html>home</a></li>
+                <li class="navlink"> <a href=week1.html>Week 1</a></li>
+                <li class="navlink"> <a href=week2.html>Week 2</a></li>
+                <li class="navlink"> <a href=week3.html>Week 3</a></li>
+                <li class="navlink"> <a href=week4.html>Week 4</a></li>
+            </ul>
+        </nav>
+        <h1 class="title" style="color:beige;">Week 6</h1>
+    </header>
+    <!-- <div class="middler"> -->
+    <main>
+        <div id="clock">Clock goes here</div>
+        <p>With my focus on the static site project I haven't been able to get too much of a look at JavaScript, but
+            luckily there's lots of sites with helpful little beginner projects to implement. Found a simple one
+            from skillcrush where you implement a 24 hour clock.</p>
+        <div id="hellos">
+        </div>
+        <p> After looking at the small clock project I tried to figure out how to create html elements dynamically with
+            js. It took me awhile, mostly because I was misusing
+        <pre>document.body</pre> thinking you could access elements within document.body by doing ->
+       <pre>document.body.main.div</pre> But now it annoyingly prompts you to enter a number as the page is opened!</p>
+        <ul>
+            <h3 class="title">Sources</h3>
+            <li><a href=https://skillcrush.com/blog/projects-you-can-do-with-javascript>Skillcrush timer
+                    project.</a></li>
+        </ul>
+    </main>
+    <!-- </div> -->
+</body>
+<script>
+    function currentTime() {
+        var date = new Date(); /* creating object of Date class */
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+        var day = date.getDate();
+        const month = date.getMonth();
+        var year = date.getFullYear();
+        hour = updateTime(hour);
+        min = updateTime(min);
+        sec = updateTime(sec);
+        document.getElementById("clock").innerText = year + "-" + (month + 1) + "-" + day + ":  " + hour + " : " + min + " : " + sec; /* adding time to the div */
+        var t = setTimeout(function () { currentTime() }, 1000); /* setting timer */
+    }
+
+    function updateTime(k) {
+        if (k < 10) {
+            return "0" + k;
+        }
+        else {
+            return k;
+        }
+    }
+    function createDivs(val) {
+        let num = parseInt(val);
+        for (let i = 0; i < num; i++) {
+            var newDiv = document.createElement("div");
+            // let text = document.createTextNode(`hello x${num}`)
+            newDiv.innerText = `hello x${i}`;
+            // newDiv.appendChild(text);
+            // document.appendChild("div");
+            let currentDiv = document.getElementById("hellos");
+            console.log(newDiv);
+
+            // document.body.appendChild(newDiv);
+            currentDiv.insertBefore(newDiv, currentDiv.childNodes[currentDiv.childNodes.length - 1])
+            // document.body.insertBefore(newDiv, currentDiv);
+        }
+
+    }
+    let val = prompt("Please enter a (smallish) number:");
+    createDivs(val);
+    currentTime();
+</script>
+
+</html>
