@@ -126,75 +126,55 @@
                 <li class="navlink"> <a href=week2.html>Week 2</a></li>
                 <li class="navlink"> <a href=week3.html>Week 3</a></li>
                 <li class="navlink"> <a href=week4.html>Week 4</a></li>
+                <li class="navlink"> <a href=week6.html>Week 6</a></li>
+
             </ul>
         </nav>
-        <h1 class="title" style="color:beige;">Week 6</h1>
+        <h1 class="title" style="color:beige;">Week 7</h1>
     </header>
     <div class="middler">
-    <main>
-        <div id="clock">Clock goes here</div>
-        <p>With my focus on the static site project I haven't been able to get too much of a look at JavaScript, but
-            luckily there's lots of sites with helpful little beginner projects to implement. Found a simple one
-            from skillcrush where you implement a 24 hour clock.</p>
-        <div id="hellos">
-        </div>
-        <p> After looking at the small clock project I tried to figure out how to create html elements dynamically with
-            js. It took me awhile, mostly because I was misusing
-        <pre>document.body</pre> thinking you could access elements within document.body by doing ->
-       <pre>document.body.main.div</pre> But now it annoyingly prompts you to enter a number as the page is opened!</p>
-        <ul>
-            <h3 class="title">Sources</h3>
-            <li><a href=https://skillcrush.com/blog/projects-you-can-do-with-javascript>Skillcrush timer
-                    project.</a></li>
-            <li><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model>Mozilla dev docs</a></li>
-        </ul>
-    </main>
+        <main>
+            <p>After struggling quite a lot trying to get the people's dictionary lab working on tuesday I've spent some
+                time reading about web services, in order to learn what I needed in order to implement the people's
+                dictionary.</p>
+
+            <p>Also I began looking over the Mozilla developer pages on Web APIs. They mentioned they twitter api so I
+                visited twitter's developer page to learn more, and apply for a developer account...
+            <pre>{
+                "data": {
+                    "id": "2244994945",
+                    "name": "Twitter Dev",
+                    "username": "TwitterDev"
+                }
+            }</pre> That format looks familiar! Lots of stuff about the different endpoints they offer, and it's cool
+            that this is the stuff we've been learning about.</p>
+            <p>So after spending a decent bit of time looking over the tools provided by twitter and a few other popular
+                sites (looked at Google's APIs for Maps ), and honestly got quite overwhelmed with everything. After
+                working
+                some more on the People's dictionary today (thursday) I've realized that I think my js fundamentals
+                could
+                use some work. What was mostly helpful was learning the specifics about Objects in js, and how essential
+                all it's properties are created with a key/value pairing. Also how you can define methods for objects by:
+            <pre>  this.sayName = function() {
+                    console.log(name)
+                  }</pre>seems very useful!
+            </p>
+            <ul>
+                <h3 class="title">Sources</h3>
+                <li><a href=https://developer.twitter.com/en/docs/twitter-api/data-dictionary/introduction>Twitter dev
+                        pages</a></li>
+                <li><a href=https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction>Mozilla
+                        dev pages on web APIs</a></li>
+                <li><a
+                        href=https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/objects-and-object-constructors>Odin
+                        Project- Javascript fundamentals</a>
+                </li>
+            </ul>
+        </main>
     </div>
 </body>
 <script>
-    function currentTime() {
-        var date = new Date(); /* creating object of Date class */
-        var hour = date.getHours();
-        var min = date.getMinutes();
-        var sec = date.getSeconds();
-        var day = date.getDate();
-        const month = date.getMonth();
-        var year = date.getFullYear();
-        hour = updateTime(hour);
-        min = updateTime(min);
-        sec = updateTime(sec);
-        document.getElementById("clock").innerText = year + "-" + (month + 1) + "-" + day + ":  " + hour + " : " + min + " : " + sec; /* adding time to the div */
-        var t = setTimeout(function () { currentTime() }, 1000); /* setting timer */
-    }
 
-    function updateTime(k) {
-        if (k < 10) {
-            return "0" + k;
-        }
-        else {
-            return k;
-        }
-    }
-    function createDivs(val) {
-        let num = parseInt(val);
-        for (let i = 0; i < num; i++) {
-            var newDiv = document.createElement("div");
-            // let text = document.createTextNode(`hello x${num}`)
-            newDiv.innerText = `hello x${i}`;
-            // newDiv.appendChild(text);
-            // document.appendChild("div");
-            let currentDiv = document.getElementById("hellos");
-            console.log(newDiv);
-
-            // document.body.appendChild(newDiv);
-            currentDiv.insertBefore(newDiv, currentDiv.childNodes[currentDiv.childNodes.length - 1])
-            // document.body.insertBefore(newDiv, currentDiv);
-        }
-
-    }
-    let val = prompt("Please enter a (smallish) number:");
-    createDivs(val);
-    currentTime();
 </script>
 
 </html>
