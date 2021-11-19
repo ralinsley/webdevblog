@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            /* height: 100vh;
+            width: 100vh; */
+            margin: 0;
+            background-color: beige;
+
+
+        }
+
+        header {
+            align-content: center;
+            background-color: green;
+            padding: 0;
+        }
+
+        .navlinks {
+            list-style-type: none;
+            background-color: gray;
+            display: inline-block;
+            margin: 0px;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+        }
+
+        .navlinks:hover {
+            background-color: gray;
+        }
+
+        .navlink:hover {
+            background-color: white;
+        }
+
+        .home {
+            font-size: 2em;
+            margin: 5px;
+
+        }
+
+        .navlink {
+            font-size: 2em;
+            margin: 5px;
+        }
+
+        .title {
+            text-decoration: underline;
+            text-align: center;
+            margin: 0;
+            padding: 1em;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            width: 100vw;
+            margin: 10vw;
+            margin-top: 10px;
+            overflow: scroll;
+        }
+
+        .middler {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+            background-color: beige;
+            height: auto;
+            width: 100vw;
+            /* height: 100vh; */
+
+        }
+
+        pre {
+            background-color: black;
+            color: white;
+            width: fit-content;
+            padding: 5px;
+        }
+
+        .lefter {
+            flex-basis: 1;
+            background-color: red;
+            padding: 1em;
+            border: solid;
+            height: auto;
+        }
+
+        .righter {
+            background-color: royalblue;
+            padding: 1em;
+            border: solid;
+            height: auto;
+            flex-grow: 1;
+
+        }
+
+        footer {
+            padding: 1em;
+            border: solid;
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                background-color: lightgreen;
+            }
+
+            main {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navlinks">
+                <li class="home"> <a href=index.html>home</a></li>
+                <li class="navlink"> <a href=week1.html>Week 1</a></li>
+                <li class="navlink"> <a href=week2.html>Week 2</a></li>
+                <li class="navlink"> <a href=week3.html>Week 3</a></li>
+                <li class="navlink"> <a href=week4.html>Week 4</a></li>
+                <li class="navlink"> <a href=week6.html>Week 6</a></li>
+                <li class="navlink"> <a href=week7.html>Week 7</a></li>
+                <li class="navlink"> <a href=week10.html>Week 10</a></li>
+                <li class="navlink"> <a href=week11.html>Week 11</a></li>
+
+
+
+            </ul>
+        </nav>
+        <h1 class="title" style="color:beige;">Week 12</h1>
+    </header>
+    <div class="middler">
+        <main>
+            <p>Very busy attempting to finish a project for my Operating systems class so didn't have too much time to
+                look at web-dev stuff. Did see that OpenAI has made it's GPT-3 api available to everyone without having
+                to apply so I had a look at it</p>
+            <pre>(async () => {
+                const gptResponse = await openai.search({
+                    engine: 'davinci',
+                    documents: ["White House", "hospital", "school"],
+                    query: "the president"
+                });
+            
+                console.log(gptResponse.data);
+            })();</pre>
+            <pre>curl https://api.openai.com/v1/engines/curie/completions \
+                -H "Content-Type: application/json" \
+                -H "Authorization: Bearer $OPENAI_API_KEY" \
+                -d '{
+                "prompt": "Original: She no went to the market.\nStandard American English:",
+                "temperature": 0,
+                "max_tokens": 60,
+                "top_p": 1.0,
+                "frequency_penalty": 0.0,
+                "presence_penalty": 0.0,
+                "stop": ["\n"]
+              }'</pre>
+            <p>Would be fun to create an app using GPT-3, would have to learn more about how it works, but something
+                interesting to apply my newfound webdev skills to! Their site gives a lot of examples of some simple
+                apps that shows off some of the fun stuff it can do.</p>
+            <p>I don't think GPT-∞ will get us any closer to the singularity, but it is pretty cool.</p>    
+            <ul>
+                <h3 class="title">Sources</h3>
+                <li><a href=https://www.npmjs.com/package/openai-api>npmjs GPT-3</a></li>
+                <li><a href=https://beta.openai.com/examples>Example apps using GPT-3</a>
+                </li>
+            </ul>
+        </main>
+    </div>
+</body>
+<script>
+
+</script>
+
+</html>
