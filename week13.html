@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            /* height: 100vh;
+            width: 100vh; */
+            margin: 0;
+            background-color: beige;
+
+
+        }
+
+        header {
+            align-content: center;
+            background-color: green;
+            padding: 0;
+        }
+
+        .navlinks {
+            list-style-type: none;
+            background-color: gray;
+            display: inline-block;
+            margin: 0px;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+        }
+
+        .navlinks:hover {
+            background-color: gray;
+        }
+
+        .navlink:hover {
+            background-color: white;
+        }
+
+        .home {
+            font-size: 2em;
+            margin: 5px;
+
+        }
+
+        .navlink {
+            font-size: 2em;
+            margin: 5px;
+        }
+
+        .title {
+            text-decoration: underline;
+            text-align: center;
+            margin: 0;
+            padding: 1em;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            width: 100vw;
+            margin: 10vw;
+            margin-top: 10px;
+            overflow: scroll;
+        }
+
+        .middler {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+            background-color: beige;
+            height: auto;
+            width: 100vw;
+            /* height: 100vh; */
+
+        }
+
+        pre {
+            background-color: black;
+            color: white;
+            width: fit-content;
+            padding: 5px;
+        }
+
+        .lefter {
+            flex-basis: 1;
+            background-color: red;
+            padding: 1em;
+            border: solid;
+            height: auto;
+        }
+
+        .righter {
+            background-color: royalblue;
+            padding: 1em;
+            border: solid;
+            height: auto;
+            flex-grow: 1;
+
+        }
+
+        footer {
+            padding: 1em;
+            border: solid;
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                background-color: lightgreen;
+            }
+
+            main {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navlinks">
+                <li class="home"> <a href=index.html>home</a></li>
+                <li class="navlink"> <a href=week1.html>Week 1</a></li>
+                <li class="navlink"> <a href=week2.html>Week 2</a></li>
+                <li class="navlink"> <a href=week3.html>Week 3</a></li>
+                <li class="navlink"> <a href=week4.html>Week 4</a></li>
+                <li class="navlink"> <a href=week6.html>Week 6</a></li>
+                <li class="navlink"> <a href=week7.html>Week 7</a></li>
+                <li class="navlink"> <a href=week10.html>Week 10</a></li>
+                <li class="navlink"> <a href=week11.html>Week 11</a></li>
+                <li class="navlink"> <a href=week12.html>Week 12</a></li>
+
+
+            </ul>
+        </nav>
+        <h1 class="title" style="color:beige;">Week 13</h1>
+    </header>
+    <div class="middler">
+        <main>
+            <p>I spend some more time looking over the official documentation for redux. They provide a handy catalog of
+                large-scale projects that use the library so I perused some of the more interesting ones to explore what
+                redux could create. I enjoyed looking at boardgame.io and seeing all the different tabletop games that
+                people have implemented with redux.</p>
+            <pre>type Profile = { profile: { currentGameId?: number } }
+                type GFB = () => Object
+                export const sendToFirebase = ({ profile }: Profile, getFirebase: GFB, action: string, node: string, data?: Object) => {
+                  const { currentGameId } = profile
+                  if (currentGameId) {
+                    const firebase = getFirebase()
+                    firebase[action](`/games/${currentGameId}/${node}`, data)
+                  }
+                }</pre>
+            <p>(This is an example of one of many different types of actions)<br>There is even an implementation of an
+                old board game called Axis and Allies! It's exciting to see the great variation of projects using react-redux.</p>
+            <ul>
+                <h3 class="title">Sources</h3>
+                <li><a href="https://www.youtube.com/watch?v=lSSQ1r8zgtY">React Redux Thunk Crash Course - Middleware &
+                        Make HTTP Requests</a></li>
+                <li><a href=https://github.com/markerikson/redux-ecosystem-links/blob/master/apps-and-examples.md>List
+                        of Projects using Redux</a></li>
+                <li><a href=https://boardgame.io/documentation/#>Board Game</a></li>
+            </ul>
+        </main>
+    </div>
+</body>
+<script>
+
+</script>
+
+</html>
